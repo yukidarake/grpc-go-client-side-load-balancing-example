@@ -20,5 +20,5 @@ FROM alpine:3.9
 RUN apk --no-cache --update add tzdata ca-certificates && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime 
 COPY --from=builder /workspace/server/server /server
-EXPOSE 55555
+EXPOSE 5000
 ENTRYPOINT ["/server"]
